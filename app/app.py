@@ -20,11 +20,6 @@ def home():
 # return render_template('home/index.html')
 
 
-@app.route('/result')
-def result():
-    return render_template('home/result.html')
-
-
 def create_app(config_object=settings):
     # create and configure the app
     app = Flask(__name__, instance_relative_config=True)

@@ -50,3 +50,7 @@ def index():
     repository = json_response['items'][0]
 
     return render_template('home/index.html', helpfuldata=repository["description"])
+
+@blueprint.route('/result')
+def result():
+    return render_template('home/result.html')
