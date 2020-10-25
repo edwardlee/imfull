@@ -2,8 +2,10 @@
 
 {% block header %}
     <div class="bg-gray-light border-bottom border-gray-light">
+    <form action = "/results" method = "POST">
         <div class="container text-center py-5 mb-4">
             <img src="{{ url_for('static', filename='img/imfull_logo.png') }}" class="w-1000" style="max-width:300px;"/>
+            {{ total if total }}
             <div class="mt-3 mb-4">
                 <h1 class="h1 mb-0 font-weight-bold">i'm full</h1>
                 <h2 class="h4 text-gray font-weight-light">feed families with the food you don't eat</h2>
@@ -11,7 +13,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm">
-                        <form>
+{#                        <form>#}
                             <fieldset>
                                 <img src="{{ url_for('static', filename='img/produce.png') }}" class="w-1000"
                                      style="max-width:180px;"/>
@@ -30,11 +32,11 @@
                                     <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
                                          data-parent="#accordionExample">
                                         <div class="card-body">
-                                            <form action="http://localhost:5000/result" method="POST">
-                                                <p><input type="text" placeholder="insert amount /lb (enter zero if N/A)"
+{#                                            <form action="http://localhost:5000/result" method="POST">#}
+                                                <p><input name="one" type="number" placeholder="insert amount /lb (enter zero if N/A)"
                                                           name="vegetables"/></p>
-                                                <p><input type="submit" value="submit"/></p>
-                                            </form>
+{#                                                <p><input type="submit" value="submit"/></p>#}
+{#                                            </form>#}
                                         </div>
                                     </div>
                                 </div>
@@ -51,19 +53,19 @@
                                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
                                          data-parent="#accordionExample">
                                         <div class="card-body">
-                                            <form action="http://localhost:5000/result" method="POST">
-                                                <p><input type="text" placeholder="insert amount /lb (enter zero if N/A)" name="fruits"/>
+{#                                            <form action="http://localhost:5000/result" method="POST">#}
+                                                <p><input name="two" type="number" placeholder="insert amount /lb (enter zero if N/A)" name="fruits"/>
                                                 </p>
-                                                <p><input type="submit" value="submit"/></p>
-                                            </form>
+{#                                                <p><input type="submit" value="submit"/></p>#}
+{#                                            </form>#}
                                         </div>
                                     </div>
                                 </div>
                             </fieldset>
-                        </form>
+{#                        </form>#}
                     </div>
                     <div class="col-sm">
-                        <form>
+{#                        <form>#}
                             <fieldset>
                                 <img src="{{ url_for('static', filename='img/meat.png') }}" class="w-1000"
                                      style="max-width:400px;"/>
@@ -82,10 +84,10 @@
                                     <div id="collapseThree" class="collapse show" aria-labelledby="headingThree"
                                          data-parent="#accordionExample">
                                         <div class="card-body">
-                                            <form action="http://localhost:5000/result" method="POST">
-                                                <p><input type="text" placeholder="insert amount /lb (enter zero if N/A)" name="beef"/></p>
-                                                <p><input type="submit" value="submit"/></p>
-                                            </form>
+{#                                            <form action="http://localhost:5000/result" method="POST">#}
+                                                <p><input name="three" type="number" placeholder="insert amount /lb (enter zero if N/A)" name="beef"/></p>
+{#                                                <p><input type="submit" value="submit"/></p>#}
+{#                                            </form>#}
                                         </div>
                                     </div>
                                 </div>
@@ -102,22 +104,22 @@
                                     <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
                                          data-parent="#accordionExample">
                                         <div class="card-body">
-                                            <form action="http://localhost:5000/result" method="POST">
-                                                <p><input type="text" placeholder="insert amount /lb (enter zero if N/A)" name="chicken"/>
+{#                                            <form action="http://localhost:5000/result" method="POST">#}
+                                                <p><input name="four" type="number" placeholder="insert amount /lb (enter zero if N/A)" name="chicken"/>
                                                 </p>
-                                                <p><input type="submit" value="submit"/></p>
-                                            </form>
+{#                                                <p><input type="submit" value="submit"/></p>#}
+{#                                            </form>#}
                                         </div>
                                     </div>
                                 </div>
                             </fieldset>
-                        </form>
+{#                        </form>#}
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm">
-                    <form>
+{#                    <form>#}
                         <fieldset>
                             <img src="{{ url_for('static', filename='img/dairy.png') }}" class="w-1000"
                                  style="max-width:180px;"/>
@@ -136,10 +138,10 @@
                                 <div id="collapseFive" class="collapse show" aria-labelledby="headingFive"
                                      data-parent="#accordionExample">
                                     <div class="card-body">
-                                        <form action="http://localhost:5000/result" method="POST">
-                                            <p><input type="text" placeholder="insert amount /lb (enter zero if N/A)" name="milk"/></p>
-                                            <p><input type="submit" value="submit"/></p>
-                                        </form>
+{#                                        <form action="http://localhost:5000/result" method="POST">#}
+                                            <p><input name="five" type="number" placeholder="insert amount /lb (enter zero if N/A)" name="milk"/></p>
+{#                                            <p><input type="submit" value="submit"/></p>#}
+{#                                        </form>#}
                                     </div>
                                 </div>
                             </div>
@@ -156,18 +158,18 @@
                                 <div id="collapseSix" class="collapse" aria-labelledby="headingSix"
                                      data-parent="#accordionExample">
                                     <div class="card-body">
-                                        <form action="http://localhost:5000/result" method="POST">
-                                            <p><input type="text" placeholder="insert amount /lb (enter zero if N/A)" name="cheese"/></p>
-                                            <p><input type="submit" value="submit"/></p>
-                                        </form>
+{#                                        <form action="http://localhost:5000/result" method="POST">#}
+                                            <p><input name="six" type="number" placeholder="insert amount /lb (enter zero if N/A)" name="cheese"/></p>
+{#                                            <p><input type="submit" value="submit"/></p>#}
+{#                                        </form>#}
                                     </div>
                                 </div>
                             </div>
                         </fieldset>
-                    </form>
+{#                    </form>#}
                 </div>
                 <div class="col-sm">
-                    <form class="left">
+{#                    <form class="left">#}
                         <fieldset>
                             <img src="{{ url_for('static', filename='img/wheat.png') }}" class="w-1000 "
                                  style="max-width:220px;"/>
@@ -186,10 +188,10 @@
                                 <div id="collapseSeven" class="collapse show" aria-labelledby="headingSeven"
                                      data-parent="#accordionExample">
                                     <div class="card-body">
-                                        <form action="http://localhost:5000/result" method="POST">
-                                            <p><input type="text" placeholder="insert amount /lb (enter zero if N/A)" name="bagel"/></p>
-                                            <p><input type="submit" value="submit"/></p>
-                                        </form>
+{#                                        <form action="http://localhost:5000/result" method="POST">#}
+                                            <p><input name="seven" type="number" placeholder="insert amount /lb (enter zero if N/A)" name="bagel"/></p>
+{#                                            <p><input type="submit" value="submit"/></p>#}
+{#                                        </form>#}
                                     </div>
                                 </div>
                             </div>
@@ -206,24 +208,22 @@
                                 <div id="collapseEight" class="collapse" aria-labelledby="headingEight"
                                      data-parent="#accordionExample">
                                     <div class="card-body">
-                                        <form action="http://localhost:5000/result" method="POST">
-                                            <p><input type="text" placeholder="insert amount /lb (enter zero if N/A)" name="bread"/></p>
-                                            <p><input type="submit" value="submit"/></p>
-                                        </form>
+{#                                        <form action="http://localhost:5000/result" method="POST">#}
+                                            <p><input name="eight" type="number" placeholder="insert amount /lb (enter zero if N/A)" name="bread"/></p>
+{#                                            <p><input type="submit" value="submit"/></p>#}
+{#                                        </form>#}
                                     </div>
                                 </div>
                             </div>
                         </fieldset>
-                    </form>
+{#                    </form>#}
                 </div>
             </div>
         </div>
-        >
         <div class="container text-center py-5 mb-4">
-            <a class="btn btn-primary" href="/result">
-                calculate!
-            </a>
+            <input class="btn btn-primary" type="submit" value="calculate!" />
         </div>
+    </form>
     </div>
     </div>
 {% endblock %}

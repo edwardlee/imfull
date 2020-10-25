@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from flask import Blueprint, render_template, redirect, url_for
+from flask import Blueprint, render_template, redirect, url_for, request
 import requests
 
 blueprint = Blueprint('home', __name__)
@@ -7,14 +7,14 @@ blueprint = Blueprint('home', __name__)
 
 @blueprint.route('/results', methods=['POST'])
 def results():
-    veggies = request.form['a']
-    fruits = request.form['collapseTwo']
-    chicken = request.form['collapseThree']
-    beef = request.form['collapseFour']
-    milk = request.form['collapseFive']
-    cheese = request.form['collapseSix']
-    bagels = request.form['collapseSeven']
-    bread = request.form['collapseEight']
+    veggies = int(request.form['one'] or 0)
+    fruits = int(request.form['two'] or 0)
+    chicken = int(request.form['three'] or 0)
+    beef = int(request.form['four'] or 0)
+    milk = int(request.form['five'] or 0)
+    cheese = int(request.form['six'] or 0)
+    bagels = int(request.form['seven'] or 0)
+    bread = int(request.form['eight'] or 0)
 
     vegTotal = veggies * .67
     fruitTotal = fruits * .71
@@ -26,14 +26,8 @@ def results():
 
     total = vegTotal + fruitTotal + chickenTotal + beefTotal + milkTotal + cheeseTotal + breadTotal
 
-    # if not 'access_token' in session:
-    #     flash('Please sign in with your GitHub account.', 'danger')
-    #     return redirect(url_for('github.fetching'))
-    #
-    # github = GitHub(access_token=session['access_token'])
-    # github.delete('/user/starred/' + repo)
+    return render_template('home/result.html', total=total)
 
-    return redirect(url_for('tutorial.fetching'))
 
 def input_info(vegetable, fruits, beef, chicken, milk, cheese, bagel, bread):
     input_values = [vegetable, fruits, beef, chicken, milk, cheese, bagel, bread]
