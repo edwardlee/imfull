@@ -1,7 +1,6 @@
 # I'm Full!
 
 This is a food wastage tool intended to increase awareness about how much money people waste in buying excess food, and how that money could be better suited to assist those in need.
--
 
 # <a name='installation-guide'>User Guide</a>
 
