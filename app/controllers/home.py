@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, redirect, url_for
 import requests
 blueprint = Blueprint('home', __name__)
 
@@ -25,13 +25,13 @@ def results():
 
     total = vegTotal+fruitTotal+chickenTotal+beefTotal+milkTotal+cheeseTotal+breadTotal
 
-
-    if not 'access_token' in session:
-        flash('Please sign in with your GitHub account.', 'danger')
-        return redirect(url_for('github.fetching'))
-
-    github = GitHub(access_token=session['access_token'])
-    github.delete('/user/starred/' + repo)
+    #
+    # if not 'access_token' in session:
+    #     flash('Please sign in with your GitHub account.', 'danger')
+    #     return redirect(url_for('github.fetching'))
+    #
+    # github = GitHub(access_token=session['access_token'])
+    # github.delete('/user/starred/' + repo)
 
     return redirect(url_for('tutorial.fetching'))
 
