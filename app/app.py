@@ -9,7 +9,7 @@ project_dir = os.path.dirname(os.path.abspath(__file__))
 app = Flask(__name__)
 
 
-@app.route("/")
+@app.route("/", methods=['POST', 'GET'])
 def start():
     return render_template('home/index.html')
 
