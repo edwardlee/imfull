@@ -6,16 +6,6 @@ from .extensions import db
 
 project_dir = os.path.dirname(os.path.abspath(__file__))
 
-app = Flask(__name__)
-
-
-@app.route("/")
-def home():
-    try:
-        return render_template('home/index.html')
-    except Exception as e:
-        return str(e)
-
 
 # return render_template('home/index.html')
 
