@@ -20,7 +20,7 @@ def home():
 # return render_template('home/index.html')
 
 
-@app.route('/result', methods=['POST', 'GET'])
+@app.route('/result')
 def result():
     return render_template('home/result.html')
 
