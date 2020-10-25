@@ -11,7 +11,13 @@ app = Flask(__name__)
 
 @app.route("/", methods=['POST', 'GET'])
 def start():
-    return render_template('home/index.html')
+    try:
+        return render_template("index.html")
+    except Exception as e:
+        return str(e)
+
+
+# return render_template('home/index.html')
 
 
 @app.route('/result', methods=['POST', 'GET'])
