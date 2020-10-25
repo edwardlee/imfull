@@ -12,7 +12,7 @@ app = Flask(__name__)
 @app.route("/", methods=['POST', 'GET'])
 def start():
     try:
-        return render_template("index.html")
+        return render_template('home/index.html')
     except Exception as e:
         return str(e)
 
