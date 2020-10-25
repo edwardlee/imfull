@@ -60,9 +60,7 @@ def result():
 def total():
     if request.method == 'POST':
         answer = request.form
-        if answer == None:
-            answer = 0
-        return render_template("home/result.html", total=answer)
+    return render_template("home/result.html", total=answer)
 
 
 
