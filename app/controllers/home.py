@@ -58,5 +58,5 @@ def result():
 @blueprint.route('/result')
 def total():
    if request.method == 'POST':
-      result = request.form
+      total = request.form
       return render_template("home/result.html",total = total)
