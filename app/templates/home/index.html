@@ -8,149 +8,54 @@
                 <h1 class="h1 mb-0 font-weight-bold">i'm full</h1>
                 <h2 class="h4 text-gray font-weight-light">feed families with the food you don't eat</h2>
             </div>
-            <form action="http://localhost:5000/result" method="POST">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm">
-                            <form>
-                                <fieldset>
-                                    <img src="{{ url_for('static', filename='img/produce.png') }}" class="w-1000"
-                                         style="max-width:180px;"/>
-                                    <legend>produce</legend>
-                                    <div class="card">
-                                        <div class="card-header" id="headingOne">
-                                            <h2 class="mb-0">
-                                                <button class="btn btn-link" type="button" data-toggle="collapse"
-                                                        data-target="#collapseOne" aria-expanded="true"
-                                                        aria-controls="collapseOne">
-                                                    vegetables
-                                                </button>
-                                            </h2>
-                                        </div>
-
-                                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
-                                             data-parent="#accordionExample">
-                                            <div class="card-body">
-                                                <p><input type="text" placeholder="insert amount /lb"
-                                                          name="vegetables"/></p>
-                                                <p><input type="submit" value="submit"/></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-header" id="headingTwo">
-                                            <h2 class="mb-0">
-                                                <button class="btn btn-link collapsed" type="button"
-                                                        data-toggle="collapse"
-                                                        data-target="#collapseTwo" aria-expanded="false"
-                                                        aria-controls="collapseTwo">
-                                                    fruits
-                                                </button>
-                                            </h2>
-                                        </div>
-                                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-                                             data-parent="#accordionExample">
-                                            <div class="card-body">
-                                                <p><input type="text" placeholder="insert amount /lb" name="fruits"/>
-                                                </p>
-                                                <p><input type="submit" value="submit"/></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </fieldset>
-                            </form>
-                        </div>
-                        <div class="col-sm">
-                            <form>
-                                <fieldset>
-                                    <img src="{{ url_for('static', filename='img/meat.png') }}" class="w-1000"
-                                         style="max-width:400px;"/>
-                                    <legend>meat</legend>
-                                    <div class="card">
-                                        <div class="card-header" id="headingOne">
-                                            <h2 class="mb-0">
-                                                <button class="btn btn-link" type="button" data-toggle="collapse"
-                                                        data-target="#collapseThree" aria-expanded="true"
-                                                        aria-controls="collapseThree">
-                                                    beef
-                                                </button>
-                                            </h2>
-                                        </div>
-
-                                        <div id="collapseThree" class="collapse show" aria-labelledby="headingThree"
-                                             data-parent="#accordionExample">
-                                            <div class="card-body">
-                                                <p><input type="text" placeholder="insert amount /lb" name="beef"/></p>
-                                                <p><input type="submit" value="submit"/></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-header" id="headingTwo">
-                                            <h2 class="mb-0">
-                                                <button class="btn btn-link collapsed" type="button"
-                                                        data-toggle="collapse"
-                                                        data-target="#collapseFour" aria-expanded="false"
-                                                        aria-controls="collapseFour">
-                                                    chicken
-                                                </button>
-                                            </h2>
-                                        </div>
-                                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
-                                             data-parent="#accordionExample">
-                                            <div class="card-body">
-                                                <p><input type="text" placeholder="insert amount /lb" name="chicken"/>
-                                                </p>
-                                                <p><input type="submit" value="submit"/></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </fieldset>
-                            </form>
-                        </div>
-                    </div>
-                </div>
+            <div class="container">
                 <div class="row">
                     <div class="col-sm">
                         <form>
                             <fieldset>
-                                <img src="{{ url_for('static', filename='img/dairy.png') }}" class="w-1000"
+                                <img src="{{ url_for('static', filename='img/produce.png') }}" class="w-1000"
                                      style="max-width:180px;"/>
-                                <legend>dairy</legend>
+                                <legend>produce</legend>
                                 <div class="card">
-                                    <div class="card-header" id="headingFive">
+                                    <div class="card-header" id="headingOne">
                                         <h2 class="mb-0">
                                             <button class="btn btn-link" type="button" data-toggle="collapse"
-                                                    data-target="#collapseFive" aria-expanded="true"
-                                                    aria-controls="collapseFive">
-                                                milk
+                                                    data-target="#collapseOne" aria-expanded="true"
+                                                    aria-controls="collapseOne">
+                                                vegetables
                                             </button>
                                         </h2>
                                     </div>
 
-                                    <div id="collapseFive" class="collapse show" aria-labelledby="headingFive"
+                                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
                                          data-parent="#accordionExample">
                                         <div class="card-body">
-                                            <p><input type="text" placeholder="insert amount /lb" name="milk"/></p>
-                                            <p><input type="submit" value="submit"/></p>
+                                            <form action="http://localhost:5000/result" method="POST">
+                                                <p><input type="text" placeholder="insert amount /lb"
+                                                          name="vegetables"/></p>
+                                                <p><input type="submit" value="submit"/></p>
+                                            </form>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="card">
-                                    <div class="card-header" id="headingSix">
+                                    <div class="card-header" id="headingTwo">
                                         <h2 class="mb-0">
                                             <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                                                    data-target="#collapseSix" aria-expanded="false"
-                                                    aria-controls="collapseSix">
-                                                cheese
+                                                    data-target="#collapseTwo" aria-expanded="false"
+                                                    aria-controls="collapseTwo">
+                                                fruits
                                             </button>
                                         </h2>
                                     </div>
-                                    <div id="collapseSix" class="collapse" aria-labelledby="headingSix"
+                                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
                                          data-parent="#accordionExample">
                                         <div class="card-body">
-                                            <p><input type="text" placeholder="insert amount /lb" name="cheese"/></p>
-                                            <p><input type="submit" value="submit"/></p>
+                                            <form action="http://localhost:5000/result" method="POST">
+                                                <p><input type="text" placeholder="insert amount /lb" name="fruits"/>
+                                                </p>
+                                                <p><input type="submit" value="submit"/></p>
+                                            </form>
                                         </div>
                                     </div>
                                 </div>
@@ -158,44 +63,50 @@
                         </form>
                     </div>
                     <div class="col-sm">
-                        <form class="left">
+                        <form>
                             <fieldset>
-                                <img src="{{ url_for('static', filename='img/wheat.png') }}" class="w-1000 "
-                                     style="max-width:220px;"/>
-                                <legend>wheat</legend>
+                                <img src="{{ url_for('static', filename='img/meat.png') }}" class="w-1000"
+                                     style="max-width:400px;"/>
+                                <legend>meat</legend>
                                 <div class="card">
-                                    <div class="card-header" id="headingSeven">
+                                    <div class="card-header" id="headingOne">
                                         <h2 class="mb-0">
                                             <button class="btn btn-link" type="button" data-toggle="collapse"
-                                                    data-target="#collapseSeven" aria-expanded="true"
-                                                    aria-controls="collapseSeven">
-                                                bagel
+                                                    data-target="#collapseThree" aria-expanded="true"
+                                                    aria-controls="collapseThree">
+                                                beef
                                             </button>
                                         </h2>
                                     </div>
 
-                                    <div id="collapseSeven" class="collapse show" aria-labelledby="headingSeven"
+                                    <div id="collapseThree" class="collapse show" aria-labelledby="headingThree"
                                          data-parent="#accordionExample">
                                         <div class="card-body">
-                                            <p><input type="text" placeholder="insert amount /lb" name="bagel"/></p>
-                                            <p><input type="submit" value="submit"/></p>
+                                            <form action="http://localhost:5000/result" method="POST">
+                                                <p><input type="text" placeholder="insert amount /lb" name="beef"/></p>
+                                                <p><input type="submit" value="submit"/></p>
+                                            </form>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="card">
-                                    <div class="card-header" id="headingEight">
+                                    <div class="card-header" id="headingTwo">
                                         <h2 class="mb-0">
                                             <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                                                    data-target="#collapseEight" aria-expanded="false"
-                                                    aria-controls="collapseEight">
-                                                bread
+                                                    data-target="#collapseFour" aria-expanded="false"
+                                                    aria-controls="collapseFour">
+                                                chicken
                                             </button>
                                         </h2>
                                     </div>
-                                    <div id="collapseEight" class="collapse" aria-labelledby="headingEight"
+                                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
                                          data-parent="#accordionExample">
                                         <div class="card-body">
-                                            <p><input type="text" placeholder="insert amount /lb" name="bread"/></p>
+                                            <form action="http://localhost:5000/result" method="POST">
+                                                <p><input type="text" placeholder="insert amount /lb" name="chicken"/>
+                                                </p>
+                                                <p><input type="submit" value="submit"/></p>
+                                            </form>
                                         </div>
                                     </div>
                                 </div>
@@ -203,15 +114,116 @@
                         </form>
                     </div>
                 </div>
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                    <form>
+                        <fieldset>
+                            <img src="{{ url_for('static', filename='img/dairy.png') }}" class="w-1000"
+                                 style="max-width:180px;"/>
+                            <legend>dairy</legend>
+                            <div class="card">
+                                <div class="card-header" id="headingFive">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link" type="button" data-toggle="collapse"
+                                                data-target="#collapseFive" aria-expanded="true"
+                                                aria-controls="collapseFive">
+                                            milk
+                                        </button>
+                                    </h2>
+                                </div>
+
+                                <div id="collapseFive" class="collapse show" aria-labelledby="headingFive"
+                                     data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <form action="http://localhost:5000/result" method="POST">
+                                            <p><input type="text" placeholder="insert amount /lb" name="milk"/></p>
+                                            <p><input type="submit" value="submit"/></p>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingSix">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                                data-target="#collapseSix" aria-expanded="false"
+                                                aria-controls="collapseSix">
+                                            cheese
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseSix" class="collapse" aria-labelledby="headingSix"
+                                     data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <form action="http://localhost:5000/result" method="POST">
+                                            <p><input type="text" placeholder="insert amount /lb" name="cheese"/></p>
+                                            <p><input type="submit" value="submit"/></p>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="col-sm">
+                    <form class="left">
+                        <fieldset>
+                            <img src="{{ url_for('static', filename='img/wheat.png') }}" class="w-1000 "
+                                 style="max-width:220px;"/>
+                            <legend>wheat</legend>
+                            <div class="card">
+                                <div class="card-header" id="headingSeven">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link" type="button" data-toggle="collapse"
+                                                data-target="#collapseSeven" aria-expanded="true"
+                                                aria-controls="collapseSeven">
+                                            bagel
+                                        </button>
+                                    </h2>
+                                </div>
+
+                                <div id="collapseSeven" class="collapse show" aria-labelledby="headingSeven"
+                                     data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <form action="http://localhost:5000/result" method="POST">
+                                            <p><input type="text" placeholder="insert amount /lb" name="bagel"/></p>
+                                            <p><input type="submit" value="submit"/></p>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingEight">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                                data-target="#collapseEight" aria-expanded="false"
+                                                aria-controls="collapseEight">
+                                            bread
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseEight" class="collapse" aria-labelledby="headingEight"
+                                     data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <form action="http://localhost:5000/result" method="POST">
+                                            <p><input type="text" placeholder="insert amount /lb" name="bread"/></p>
+                                            <p><input type="submit" value="submit"/></p>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
         </div>
         >
         <div class="container text-center py-5 mb-4">
-            <p><input type="submit" value="submit"/></p>
             <a class="btn btn-primary" href="/result">
                 calculate!
             </a>
         </div>
-        </form>
     </div>
     </div>
 {% endblock %}
