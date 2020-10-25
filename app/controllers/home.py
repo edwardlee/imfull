@@ -35,6 +35,9 @@ def results():
 
     return redirect(url_for('tutorial.fetching'))
 
+def input_info(vegetable, fruits, beef, chicken, milk, cheese, bagel, bread):
+    input_values = [vegetable, fruits, beef, chicken, milk, cheese, bagel, bread]
+    return
 
 @blueprint.route('/')
 def index():
@@ -59,8 +62,9 @@ def result():
 @blueprint.route('/result')
 def total():
     if request.method == 'POST':
-        answer = request.form
-    return render_template("home/result.html", total=answer)
+        input_info(request.form['vegetable'], request.form['fruits'], request.form['beef'], request.form['chicken'], request.form['milk'], request.form['cheese'], request.form['bagel'], request.form['bread'])
+        total_price = input_values[0]*0.67 + input_values[1]*0.71+input_values[2]*1.54 + input_values[3] * 4.08+input_values[4]*3.45+input_values[5]*4.27+input_values[6]*0.35 + input_values[7]*2.08
+    return render_template("home/result.html", total=total_price)
 
 
 
