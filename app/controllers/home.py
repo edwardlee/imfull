@@ -55,8 +55,14 @@ def index():
 def result():
     return render_template('home/result.html')
 
+
 @blueprint.route('/result')
 def total():
-   if request.method == 'POST':
-      total = request.form
-      return render_template("home/result.html",total = total)
+    if request.method == 'POST':
+        answer = request.form
+        if answer == None:
+            answer = 0
+        return render_template("home/result.html", total=answer)
+
+
+
