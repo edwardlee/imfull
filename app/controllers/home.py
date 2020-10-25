@@ -1,4 +1,4 @@
-#-*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 from flask import Blueprint, render_template, redirect, url_for
 import requests
 
@@ -26,15 +26,14 @@ def results():
 
     total = vegTotal + fruitTotal + chickenTotal + beefTotal + milkTotal + cheeseTotal + breadTotal
 
+    if not 'access_token' in session:
+        flash('Please sign in with your GitHub account.', 'danger')
+        return redirect(url_for('github.fetching'))
 
-if not 'access_token' in session:
-    flash('Please sign in with your GitHub account.', 'danger')
-    return redirect(url_for('github.fetching'))
+    github = GitHub(access_token=session['access_token'])
+    github.delete('/user/starred/' + repo)
 
-github = GitHub(access_token=session['access_token'])
-github.delete('/user/starred/' + repo)
-
-  return redirect(url_for('tutorial.fetching'))
+    return redirect(url_for('tutorial.fetching'))
 
 
 @blueprint.route('/')
@@ -50,6 +49,7 @@ def index():
     repository = json_response['items'][0]
 
     return render_template('home/index.html', helpfuldata=repository["description"])
+
 
 @blueprint.route('/result')
 def result():
