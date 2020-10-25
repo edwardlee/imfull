@@ -6,14 +6,14 @@ blueprint = Blueprint('home', __name__)
 
 @blueprint.route('/results', methods=['POST'])
 def results():
-    veggies = request.form['Veggies']
-    fruits = request.form['Fruits']
-    chicken = request.form['Chicken']
-    beef = request.form['Beef']
-    milk = request.form['Milk']
-    cheese = request.form['Cheese']
-    bagels = request.form['Bagels']
-    bread = request.form['Bread']
+    veggies = request.form['collapseOne']
+    fruits = request.form['collapseTwo']
+    chicken = request.form['collapseThree']
+    beef = request.form['collapseFour']
+    milk = request.form['collapseFive']
+    cheese = request.form['collapseSix']
+    bagels = request.form['collapseSeven']
+    bread = request.form['collapseEight']
 
     vegTotal = veggies*.67
     fruitTotal = fruits*.71
