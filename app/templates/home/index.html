@@ -60,7 +60,7 @@
                                 <img src="{{ url_for('static', filename='img/meat.png') }}" class="w-1000"
                                      style="max-width:400px;"/>
                                 <legend>meat</legend>
-                                                  <div class="card">
+                                <div class="card">
                                     <div class="card-header" id="headingOne">
                                         <h2 class="mb-0">
                                             <button class="btn btn-link" type="button" data-toggle="collapse"
@@ -107,41 +107,41 @@
                             <img src="{{ url_for('static', filename='img/dairy.png') }}" class="w-1000"
                                  style="max-width:180px;"/>
                             <legend>dairy</legend>
-                                             <div class="card">
-                                    <div class="card-header" id="headingFive">
-                                        <h2 class="mb-0">
-                                            <button class="btn btn-link" type="button" data-toggle="collapse"
-                                                    data-target="#collapseFive" aria-expanded="true"
-                                                    aria-controls="collapseFive">
-                                                milk
-                                            </button>
-                                        </h2>
-                                    </div>
+                            <div class="card">
+                                <div class="card-header" id="headingFive">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link" type="button" data-toggle="collapse"
+                                                data-target="#collapseFive" aria-expanded="true"
+                                                aria-controls="collapseFive">
+                                            milk
+                                        </button>
+                                    </h2>
+                                </div>
 
-                                    <div id="collapseFive" class="collapse show" aria-labelledby="headingFive"
-                                         data-parent="#accordionExample">
-                                        <div class="card-body">
-                                            <input placeholder="insert amount /lb">
-                                        </div>
+                                <div id="collapseFive" class="collapse show" aria-labelledby="headingFive"
+                                     data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <input placeholder="insert amount /lb">
                                     </div>
                                 </div>
-                                <div class="card">
-                                    <div class="card-header" id="headingSix">
-                                        <h2 class="mb-0">
-                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                                                    data-target="#collapseSix" aria-expanded="false"
-                                                    aria-controls="collapseSix">
-                                                cheese
-                                            </button>
-                                        </h2>
-                                    </div>
-                                    <div id="collapseSix" class="collapse" aria-labelledby="headingSix"
-                                         data-parent="#accordionExample">
-                                        <div class="card-body">
-                                            <input placeholder="insert amount /lb">
-                                        </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingSix">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                                data-target="#collapseSix" aria-expanded="false"
+                                                aria-controls="collapseSix">
+                                            cheese
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseSix" class="collapse" aria-labelledby="headingSix"
+                                     data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <input placeholder="insert amount /lb">
                                     </div>
                                 </div>
+                            </div>
                         </fieldset>
                     </form>
                 </div>
@@ -151,41 +151,43 @@
                             <img src="{{ url_for('static', filename='img/wheat.png') }}" class="w-1000 "
                                  style="max-width:220px;"/>
                             <legend>wheat</legend>
-                                              <div class="card">
-                                    <div class="card-header" id="headingSeven">
-                                        <h2 class="mb-0">
-                                            <button class="btn btn-link" type="button" data-toggle="collapse"
-                                                    data-target="#collapseSeven" aria-expanded="true"
-                                                    aria-controls="collapseSeven">
-                                                bagels
-                                            </button>
-                                        </h2>
-                                    </div>
+                            <div class="card">
+                                <div class="card-header" id="headingSeven">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link" type="button" data-toggle="collapse"
+                                                data-target="#collapseSeven" aria-expanded="true"
+                                                aria-controls="collapseSeven">
+                                            bagels
+                                        </button>
+                                    </h2>
+                                </div>
 
-                                    <div id="collapseSeven" class="collapse show" aria-labelledby="headingSeven"
-                                         data-parent="#accordionExample">
-                                        <div class="card-body">
-                                            <input placeholder="insert amount /lb">
-                                        </div>
+                                <div id="collapseSeven" class="collapse show" aria-labelledby="headingSeven"
+                                     data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <input placeholder="insert amount /lb">
                                     </div>
                                 </div>
-                                <div class="card">
-                                    <div class="card-header" id="headingEight">
-                                        <h2 class="mb-0">
-                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                                                    data-target="#collapseEight" aria-expanded="false"
-                                                    aria-controls="collapseEight">
-                                                bread
-                                            </button>
-                                        </h2>
-                                    </div>
-                                    <div id="collapseEight" class="collapse" aria-labelledby="headingEight"
-                                         data-parent="#accordionExample">
-                                        <div class="card-body">
-                                            <input placeholder="insert amount /lb">
-                                        </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingEight">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                                data-target="#collapseEight" aria-expanded="false"
+                                                aria-controls="collapseEight">
+                                            bread
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseEight" class="collapse" aria-labelledby="headingEight"
+                                     data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <form action="http://localhost:5000/result" method="POST">
+                                            <p><input type="submit" value="submit" placeholder="insert amount /lb"/></p>
+                                        </form>
                                     </div>
                                 </div>
+                            </div>
                         </fieldset>
                     </form>
                 </div>

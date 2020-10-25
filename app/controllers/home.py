@@ -7,7 +7,7 @@ blueprint = Blueprint('home', __name__)
 
 @blueprint.route('/results', methods=['POST'])
 def results():
-    veggies = request.form['collapseOne']
+    veggies = request.form['a']
     fruits = request.form['collapseTwo']
     chicken = request.form['collapseThree']
     beef = request.form['collapseFour']
@@ -54,3 +54,9 @@ def index():
 @blueprint.route('/result')
 def result():
     return render_template('home/result.html')
+
+@blueprint.route('/result')
+def total():
+   if request.method == 'POST':
+      result = request.form
+      return render_template("home/result.html",total = total)
