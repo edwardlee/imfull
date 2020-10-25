@@ -5,36 +5,36 @@ import requests
 blueprint = Blueprint('home', __name__)
 
 
-@blueprint.route('/results', methods=['POST'])
-def results():
-    veggies = requests.form['collapseOne']
-    fruits = requests.form['collapseTwo']
-    chicken = requests.form['collapseThree']
-    beef = requests.form['collapseFour']
-    milk = requests.form['collapseFive']
-    cheese = requests.form['collapseSix']
-    bagels = requests.form['collapseSeven']
-    bread = requests.form['collapseEight']
+# @blueprint.route('/results', methods=['POST'])
+# def results():
+#     veggies = requests.form['collapseOne']
+#     fruits = requests.form['collapseTwo']
+#     chicken = requests.form['collapseThree']
+#     beef = requests.form['collapseFour']
+#     milk = requests.form['collapseFive']
+#     cheese = requests.form['collapseSix']
+#     bagels = requests.form['collapseSeven']
+#     bread = requests.form['collapseEight']
+#
+#     vegTotal = veggies * .67
+#     fruitTotal = fruits * .71
+#     chickenTotal = chicken * 1.54
+#     beefTotal = beef * 4.08
+#     milkTotal = milk * 3.45
+#     cheeseTotal = cheese * 4.27
+#     breadTotal = bread * 2.08
+#
+#     total = vegTotal + fruitTotal + chickenTotal + beefTotal + milkTotal + cheeseTotal + breadTotal
 
-    vegTotal = veggies * .67
-    fruitTotal = fruits * .71
-    chickenTotal = chicken * 1.54
-    beefTotal = beef * 4.08
-    milkTotal = milk * 3.45
-    cheeseTotal = cheese * 4.27
-    breadTotal = bread * 2.08
+#
+# if not 'access_token' in session:
+#     flash('Please sign in with your GitHub account.', 'danger')
+#     return redirect(url_for('github.fetching'))
+#
+# github = GitHub(access_token=session['access_token'])
+# github.delete('/user/starred/' + repo)
 
-    total = vegTotal + fruitTotal + chickenTotal + beefTotal + milkTotal + cheeseTotal + breadTotal
-
-    #
-    # if not 'access_token' in session:
-    #     flash('Please sign in with your GitHub account.', 'danger')
-    #     return redirect(url_for('github.fetching'))
-    #
-    # github = GitHub(access_token=session['access_token'])
-    # github.delete('/user/starred/' + repo)
-
-    return redirect(url_for('tutorial.fetching'))
+#   return redirect(url_for('tutorial.fetching'))
 
 
 @blueprint.route('/')
