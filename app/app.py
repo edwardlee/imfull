@@ -9,8 +9,8 @@ project_dir = os.path.dirname(os.path.abspath(__file__))
 app = Flask(__name__)
 
 
-@app.route("/", methods=['GET'])
-def start():
+@app.route("/")
+def home():
     try:
         return render_template('home/index.html')
     except Exception as e:
