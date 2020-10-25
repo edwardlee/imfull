@@ -33,7 +33,7 @@ def results():
     github = GitHub(access_token=session['access_token'])
     github.delete('/user/starred/' + repo)
 
-    return redirect(url_for('tutorial.fetching'))
+    #return redirect(url_for('tutorial.fetching'))
 
 
 @blueprint.route('/')
