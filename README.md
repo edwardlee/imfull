@@ -1,7 +1,6 @@
 # I'm Full!
 
-This is a hackathon boilerplate for new Flask web applications created by [Major League Hacking](https://github.com/MLH). It is for hackers looking to get started quickly on a new hackathon project using the Flask microframework.
-
+This is a food wastage tool intended to increase awareness about how much money people waste in buying excess food, and how that money could be better suited to assist those in need.
 - [Installation Guide](#installation-guide) - How to get started with a new Flask app
 - [User Guide](https://github.com/MLH/mlh-hackathon-flask-starter/blob/master/docs/USER_GUIDE.md) - How to develop apps created with this starter project
 - [Contributing Guide](https://github.com/MLH/mlh-hackathon-flask-starter/blob/master/docs/CONTRIBUTING.md) - How to contribute to the project
