@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from flask import Blueprint, render_template, redirect, url_for
 import requests
+
 blueprint = Blueprint('home', __name__)
 
 
@@ -15,15 +16,15 @@ def results():
     bagels = request.form['collapseSeven']
     bread = request.form['collapseEight']
 
-    vegTotal = veggies*.67
-    fruitTotal = fruits*.71
-    chickenTotal = chicken*1.54
-    beefTotal = beef*4.08
-    milkTotal = milk*3.45
-    cheeseTotal = cheese*4.27
-    breadTotal = bread*2.08
+    vegTotal = veggies * .67
+    fruitTotal = fruits * .71
+    chickenTotal = chicken * 1.54
+    beefTotal = beef * 4.08
+    milkTotal = milk * 3.45
+    cheeseTotal = cheese * 4.27
+    breadTotal = bread * 2.08
 
-    total = vegTotal+fruitTotal+chickenTotal+beefTotal+milkTotal+cheeseTotal+breadTotal
+    total = vegTotal + fruitTotal + chickenTotal + beefTotal + milkTotal + cheeseTotal + breadTotal
 
     #
     # if not 'access_token' in session:
@@ -34,6 +35,7 @@ def results():
     # github.delete('/user/starred/' + repo)
 
     return redirect(url_for('tutorial.fetching'))
+
 
 @blueprint.route('/')
 def index():
